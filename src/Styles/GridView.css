@@ -1,0 +1,35 @@
+.item {
+  display: grid;
+  grid-template-columns: 640px 1fr;
+  grid-template-rows: 1fr;
+  margin: 20px;
+  padding: 20px;
+  background-color: #FAEBD7;
+  color: #333333;
+  border-radius: 5px;
+  box-shadow: 6px 6px 3px #222222;
+}
+
+.row {
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.props {
+  text-align: center;
+}
+
+.props > * {
+  margin: 0 30px 50px 30px;
+}
+
+.error {
+  text-align: center;
+  color: white;
+}
+
+.remove-button {
+  display: none;
+}

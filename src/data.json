@@ -1,0 +1,39 @@
+{
+    "title": "Cakes",
+    "cakes": [
+        {
+            "id": 1,
+            "name": "Sweets Cakes Chocolate Cookies",
+            "price": "45lv",
+            "thumb": "http://s1.1zoom.me/b5050/366/Sweets_Cakes_Chocolate_Cookies_Black_background_537922_640x480.jpg",
+            "description": "Chocolate crème cake with cherries, chocolate mousse and triple sec, whip cream frosting and chocolate crumbles on the sides."
+        },
+        {
+            "id": 2,
+            "name": "Semi-naked cakes",
+            "price": "40lv",
+            "thumb": "https://cdn-blogs.tribune.com.pk/2016/08/39208-okdf-1471606809-383-640x480.jpg",
+            "description": "Our moist white crème cake with fresh strawberry in whip cream and a whip cream frosting."
+        },
+        {
+            "id": 3,
+            "name": "Sweets Cakes Chocolate Orange fruit",
+            "price": "50lv",
+            "thumb": "http://s1.1zoom.me/b5050/459/Sweets_Cakes_Chocolate_463378_640x480.jpg",
+            "description": "This classic originates from the Hotel Sacher in Vienna, Austria. This cake is a two layer chocolate cake with a glorious raspberry filling. The cake is then covered in chocolate buttercream and topped with chocolate ganache."},
+        {
+            "id": 4,
+            "name": "Chocolate Fudge Cake",
+            "price": "55lv",
+            "thumb": "http://www.sheratonwine-dine.com.hk/cake/data/images/Chocolate%20Fudge%20Cake.jpg",
+            "description": "I can recall how immense the hype for Chocolate Fudge Cake was around the same time last year. I failed to understand why anyone would prefer to eat cake with a portion of the frosting missing, it simply bewildered me. However, once photographs of dainty caked draped in flowers and drizzled with all forms of wonderful sauces started flooding social mediums, I finally caved in."
+        },
+        {
+            "id": 5,
+            "name": "Monkeys",
+            "price": "35lv",
+            "thumb": "https://cdn001.cakecentral.com/gallery/2016/02/900_fondant-monkey-banana-cake-831893DsZJz.jpg",
+            "description": "Hand molded monkeys and bananas with fondant."
+        }
+    ]
+}

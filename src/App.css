@@ -1,0 +1,27 @@
+a {
+  text-decoration: none;
+  color: white;
+}
+
+img {
+  border-radius: 20px;
+  cursor: pointer;
+  width: 640px;
+  height: 480px;
+  box-shadow: 6px 6px 3px #333333;
+}
+
+button {
+  background-color: #FAEBD7;
+  color: #333333;
+  border: 2px solid green;
+  margin: 0 10px;
+  padding: 0 10px;
+  border-radius: 10px;
+
+}
+
+button:hover {
+  background-color: #333333;
+  color: #FAEBD7;
+}
