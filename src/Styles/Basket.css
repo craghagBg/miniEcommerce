@@ -14,6 +14,10 @@
 }
 
 .basket-item > div {
+    min-height: 50px;
+    align-items: center;
+    justify-content: center;
+    color: #333333;
     overflow: hidden;
     text-overflow: ellipsis;
     overflow-wrap: break-word;
@@ -43,4 +47,26 @@
 
 .confirm:active {
     transform: translateY(4px);
+}
+
+.quantity {
+    display: inline-block;
+}
+
+.quantity-button {
+    text-align: center;
+    background-color: #FAEBD7;
+    border: 1px solid green;
+    border-radius: 50%;
+    box-shadow: 3px 3px 1px #222222;
+    font-weight: bold;
+    margin: 0 20px;
+    width: 30px;
+    height: 30px;
+    outline: none;
+    cursor: pointer;
+}
+
+.quantity-button:active {
+    transform: translateY(3px);
 }

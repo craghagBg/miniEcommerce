@@ -19,18 +19,18 @@ class Store extends EventEmitter {
     }
 
     add (id) {
-        this.data.cakes.map((cake) => {
-            if (cake.id === id) {
-                cake.basket++;
+        this.data.cakes.map((item) => {
+            if (item.id === id && item.quantity < 5) {
+                item.quantity++;
             }
         });
         this.emit('change', this.data);
     }
 
     remove (id) {
-        this.data.cakes.filter((cake) => {
-            if (cake.id === id && cake.basket > 0) {
-                cake.basket--;
+        this.data.cakes.filter((item) => {
+            if (item.id === id && item.quantity > 0) {
+                item.quantity--;
             }
         });
         this.emit('change', this.data);

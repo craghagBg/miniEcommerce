@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import './App.css';
 import GridView from "./Components/GridView";
 import Basket from "./Components/Basket";
-import { Route, Switch } from 'react-router-dom'
+import { Route, Switch, Redirect } from 'react-router-dom'
 import action from './Actions/actions'
 import store from './Stores/store'
 
@@ -11,8 +11,6 @@ class App extends Component {
     constructor (props) {
         super(props);
 
-        console.log(props);
-        console.log(props.history);
         this.state = {
             data: {},
             isFetch: false
@@ -45,6 +43,30 @@ class App extends Component {
         action.remove(id);
     }
 
+    confirm () {
+        const items = [];
+        this.state.data.cakes.map((item) => {
+            if (item.quantity > 0) {
+                items.push({
+                    name: item.name,
+                    price: item.price,
+                    quantity: item.quantity
+                })
+            }
+        });
+
+        fetch('/server', {
+            method: 'post',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ data: items })
+        })
+        .then(function(res){ console.log(res) })
+        .catch(function(res){ console.log(res) })
+    }
+
     render() {
         return (
             <Switch>
@@ -54,6 +76,7 @@ class App extends Component {
                         isFetch={ this.state.isFetch }
                         add={ this.add.bind(this) }
                         remove={ this.remove.bind(this) }
+                        confirm={ this.confirm.bind(this) }
                      />}
                 />
                 <Route path='/' component={() =>
@@ -64,6 +87,7 @@ class App extends Component {
                         remove={ this.remove.bind(this) }
                     />}
                 />
+                <Redirect from='*' to='/' />
             </Switch>
         )
     }
