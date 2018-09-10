@@ -1,0 +1,46 @@
+.basket-item {
+    display: grid;
+    border: 2px solid green;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    margin: 10px 10px;
+    padding: 20px;
+    background-color: #FAEBD7;
+    color: #333333;
+    border-radius: 5px;
+    box-shadow: 6px 6px 3px #222222;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.basket-item > div {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    overflow-wrap: break-word;
+    text-align: center;
+}
+
+.empty-basket {
+    margin: 20px auto;
+    text-align: center;
+    color: #FAEBD7;
+}
+
+.confirm {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #FAEBD7;
+    border: 2px solid green;
+    color: #333333;
+    border-radius: 5px;
+    box-shadow: 6px 6px 3px #222222;
+    font-size: 1.5em;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+    ;
+}
+
+.confirm:active {
+    transform: translateY(4px);
+}

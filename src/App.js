@@ -1,15 +1,18 @@
 import React, {Component} from 'react';
 import './App.css';
 import GridView from "./Components/GridView";
-import ActiveView from "./Components/Basket";
+import Basket from "./Components/Basket";
 import { Route, Switch } from 'react-router-dom'
 import action from './Actions/actions'
 import store from './Stores/store'
 
 class App extends Component {
+
     constructor (props) {
         super(props);
 
+        console.log(props);
+        console.log(props.history);
         this.state = {
             data: {},
             isFetch: false
@@ -17,12 +20,11 @@ class App extends Component {
 
         this.onChange = this.onChange.bind(this);
         store.on('change', this.onChange);
-
     }
 
-    onChange (event) {
+    onChange (data) {
         this.setState({
-            data: event.data,
+            data,
             isFetch: true
         })
     }
@@ -35,14 +37,31 @@ class App extends Component {
         store.removeListener('change', this.onChange);
     }
 
+    add (id) {
+        action.add(id);
+    }
+
+    remove (id) {
+        action.remove(id);
+    }
+
     render() {
         return (
             <Switch>
-                <Route path= '/active' component={ ActiveView } />
+                <Route path= '/basket' component={() =>
+                    <Basket
+                        data={ this.state.data }
+                        isFetch={ this.state.isFetch }
+                        add={ this.add.bind(this) }
+                        remove={ this.remove.bind(this) }
+                     />}
+                />
                 <Route path='/' component={() =>
                     <GridView
                         data={ this.state.data }
                         isFetch={ this.state.isFetch }
+                        add={ this.add.bind(this) }
+                        remove={ this.remove.bind(this) }
                     />}
                 />
             </Switch>
