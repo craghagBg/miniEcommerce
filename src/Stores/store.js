@@ -18,6 +18,10 @@ class Store extends EventEmitter {
         }
     }
 
+    /**
+     *
+     * @param {Number} id
+     */
     add (id) {
         this.data.cakes.map((item) => {
             if (item.id === id && item.quantity < 5) {
@@ -27,6 +31,10 @@ class Store extends EventEmitter {
         this.emit('change', this.data);
     }
 
+    /**
+     *
+     * @param {Number} id
+     */
     remove (id) {
         this.data.cakes.filter((item) => {
             if (item.id === id && item.quantity > 0) {
